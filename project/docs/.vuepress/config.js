@@ -1,9 +1,9 @@
 module.exports = {
-  title: "jxwaf",
-  description: "jxwaf文档",
+  title: "锦衣盾",
+  description: "基于openresty(nginx+lua)开发的下一代web应用防火墙",
   themeConfig: {
     nav: [
-      { text: "Home", link: "/" },
+      { text: "首页", link: "/" },
       { text: "Guide", link: "/test1" },
       { text: "External", link: "https://google.com" }
     ],

@@ -1,6 +1,6 @@
 ---
 home: true
-heroImage: /hero.png
+heroImage:
 actionText: 快速上手 →
 actionLink: /test1
 features:
@@ -13,4 +13,4 @@ features:
 footer: MIT Licensed | Copyright © 2018-present Evan You
 ---
 
-xxxXXX
+xxxXXXc
