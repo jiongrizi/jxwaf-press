@@ -55,6 +55,7 @@ try to connect jxwaf server auth api_key and api_password,result is True
 ```
 
 10. \$ /opt/jxwaf/nginx/sbin/nginx
+
 11. 启动 openresty,openresty 会在启动或者 reload 的时候自动到 jxwaf 管理中心拉取用户配置的最新规则,之后会定期同步配置,周期可在全局配置页面设置。
 
 注意：JXWAF 是通过控制台或者 tools 目录下的脚本进行配置，除非您是专业人士，否则请勿擅自修改相关的配置文件
@@ -64,6 +65,7 @@ try to connect jxwaf server auth api_key and api_password,result is True
 进入控制台后，点击 “网站配置” 进入网站配置页面，点击 “添加网站” 新增要防护的网站。
 
 ![avatar](/images/4.png)
+
 创建域名后，可以在“网站配置” 页面看到域名的状态
 
 ![avatar](/images/5.png)

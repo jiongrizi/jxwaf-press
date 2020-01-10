@@ -1,4 +1,4 @@
-## 用户配置指南
+## 配置指南
 
 ## 域名配置
 
@@ -34,11 +34,13 @@ UVMzFf7mkx2IXuwLMNISGL3lpjmrrqNQDZeSg+PZ/+PMBClho8B+oJZKYM/fD9eCWqtq9QDlZY6s0trR
 
 第二种情况为集群部署，当 AES 加密后的私钥配置完成后，在其他服务器上，需要进行 AES 密钥的初使化操作，不然会因无法解密私钥导致请求失败。
 
-```
-1.$ cd jxwaf/tools
-2.$ private_key_enc_init.py --aes_enc_key=9d19112c4d6df74q --aes_enc_iv=6d095e23c863e611
-3. “aes_enc_key”为AES加密的key， “aes_enc_iv”为AES加密的iv值，需确保与私钥的一致，运行完成后，如下显示则初使化成功
+1.\$ cd jxwaf/tools
 
+2.\$ private_key_enc_init.py --aes_enc_key=9d19112c4d6df74q --aes_enc_iv=6d095e23c863e611
+
+3.“aes_enc_key”为 AES 加密的 key， “aes_enc_iv”为 AES 加密的 iv 值，需确保与私钥的一致，运行完成后，如下显示则初使化成功
+
+```
 config file:  /opt/jxwaf/nginx/conf/jxwaf/jxwaf_config.json
 config result:
 init success,aes_enc_key is 9d19112c4d6df749,aes_enc_iv is 6d095e23c863e616
@@ -115,11 +117,11 @@ WAF 前是否存在 7 层代理，如 CDN，其他 WAF 产品等，如果存在�
 
 - 正常请求日志记录
 
-在开启“正常请求放行”功能后，可以开启该功能来记录 bypass 的请求。
+在开启“正常请求放行”功能后，可以开启该功能来记录放行的请求。
 
 - 异常请求日志记录
 
-在开启“正常请求 bypass”功能后，可以开启该功能来记录异常的请求，异常请求未必是攻击，只是无法通过语义识别引擎的白名单算法筛选。
+在开启“正常请求放行”功能后，可以开启该功能来记录异常的请求，异常请求未必是攻击，只是无法通过语义识别引擎的白名单算法筛选。
 
 - 攻击请求日志记录
 
@@ -187,6 +189,10 @@ WAF 前是否存在 7 层代理，如 CDN，其他 WAF 产品等，如果存在�
 ##### 优先级
 
 优先级分为 5 个级别,优先级越高,越先执行,同等优先级的规则,规则越早创建越先执行
+
+#### IP 黑白名单
+
+快速添加 IP 黑白名单,基于 HASH 算法进行匹配,相比于自定义规则,性能更优,可用于大批量封禁或者放行 IP
 
 #### 地区封禁
 
