@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>API接口 | JXWAF</title>
+    <meta name="description" content="下一代web应用防火墙">
+    <meta name="generator" content="VuePress 1.3.1">
+    <link rel="icon" href="./images/logo.png">
+    
+    <link rel="preload" href="/assets/css/0.styles.f6e18c68.css" as="style"><link rel="preload" href="/assets/js/app.797f81f3.js" as="script"><link rel="preload" href="/assets/js/2.914497f9.js" as="script"><link rel="preload" href="/assets/js/6.a36b8f3e.js" as="script"><link rel="prefetch" href="/assets/js/10.de576c9c.js"><link rel="prefetch" href="/assets/js/3.d46dc1e8.js"><link rel="prefetch" href="/assets/js/4.485ca34a.js"><link rel="prefetch" href="/assets/js/5.0577c150.js"><link rel="prefetch" href="/assets/js/7.a7974f29.js"><link rel="prefetch" href="/assets/js/8.836c064b.js"><link rel="prefetch" href="/assets/js/9.f51dff62.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.f6e18c68.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">JXWAF</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Guide" class="dropdown-title"><span class="title">Guide</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/introduction.html" class="nav-link">
+  JXWAF介绍
+</a></li><li class="dropdown-item"><!----> <a href="/start.html" class="nav-link">
+  快速入门
+</a></li><li class="dropdown-item"><!----> <a href="/config.html" class="nav-link">
+  配置指南
+</a></li><li class="dropdown-item"><!----> <a href="/api.html" class="nav-link router-link-exact-active router-link-active">
+  API接口
+</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/jx-sec/jxwaf" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Guide" class="dropdown-title"><span class="title">Guide</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/introduction.html" class="nav-link">
+  JXWAF介绍
+</a></li><li class="dropdown-item"><!----> <a href="/start.html" class="nav-link">
+  快速入门
+</a></li><li class="dropdown-item"><!----> <a href="/config.html" class="nav-link">
+  配置指南
+</a></li><li class="dropdown-item"><!----> <a href="/api.html" class="nav-link router-link-exact-active router-link-active">
+  API接口
+</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/jx-sec/jxwaf" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/" class="sidebar-link">Home</a></li><li><a href="/introduction.html" class="sidebar-link">JXWAF 介绍</a></li><li><a href="/start.html" class="sidebar-link">快速入门</a></li><li><a href="/config.html" class="sidebar-link">配置指南</a></li><li><a href="/api.html" class="active sidebar-link">API接口</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/api.html#api接口" class="sidebar-link">API接口</a></li><li class="sidebar-sub-header"><a href="/api.html#调用方式" class="sidebar-link">调用方式</a></li><li class="sidebar-sub-header"><a href="/api.html#获取域名列表" class="sidebar-link">获取域名列表</a></li><li class="sidebar-sub-header"><a href="/api.html#获取域名详细信息" class="sidebar-link">获取域名详细信息</a></li><li class="sidebar-sub-header"><a href="/api.html#删除域名" class="sidebar-link">删除域名</a></li><li class="sidebar-sub-header"><a href="/api.html#新建域名" class="sidebar-link">新建域名</a></li><li class="sidebar-sub-header"><a href="/api.html#编辑域名" class="sidebar-link">编辑域名</a></li><li class="sidebar-sub-header"><a href="/api.html#获取域名防护配置" class="sidebar-link">获取域名防护配置</a></li><li class="sidebar-sub-header"><a href="/api.html#修改域名防护配置" class="sidebar-link">修改域名防护配置</a></li><li class="sidebar-sub-header"><a href="/api.html#获取cc攻击防护配置" class="sidebar-link">获取CC攻击防护配置</a></li><li class="sidebar-sub-header"><a href="/api.html#修改cc攻击防护配置" class="sidebar-link">修改CC攻击防护配置</a></li><li class="sidebar-sub-header"><a href="/api.html#获取web攻击防护配置" class="sidebar-link">获取Web攻击防护配置</a></li><li class="sidebar-sub-header"><a href="/api.html#修改web攻击防护配置" class="sidebar-link">修改Web攻击防护配置</a></li><li class="sidebar-sub-header"><a href="/api.html#创建ip黑白名单" class="sidebar-link">创建IP黑白名单</a></li><li class="sidebar-sub-header"><a href="/api.html#删除ip黑白名单" class="sidebar-link">删除IP黑白名单</a></li><li class="sidebar-sub-header"><a href="/api.html#查看ip黑白名单列表" class="sidebar-link">查看IP黑白名单列表</a></li></ul></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="api接口"><a href="#api接口" class="header-anchor">#</a> API接口</h2> <h2 id="调用方式"><a href="#调用方式" class="header-anchor">#</a> 调用方式</h2> <p>API调用域名为: api.jxwaf.com</p> <p>所有的API接口只接受JSON格式数据</p> <p>通用参数为api_key和api_password，这两个参数值需要登录控制台后，在 WAF管理 -&gt; 全局配置 页面获取</p> <h2 id="获取域名列表"><a href="#获取域名列表" class="header-anchor">#</a> 获取域名列表</h2> <p>API地址:</p> <p>https://api.jxwaf.com/api/waf_get_domain_list</p> <p>参数:</p> <div class="language- extra-class"><pre class="language-text"><code>{&quot;api_key&quot;:&quot;&quot;,&quot;api_password&quot;:&quot;&quot;}
+</code></pre></div><p>结果:</p> <div class="language- extra-class"><pre class="language-text"><code>{
+    &quot;message&quot;: [
+        {
+            &quot;domain&quot;: &quot;180.76.137.111&quot;,
+            &quot;http&quot;: &quot;true&quot;,
+            &quot;custom_protection&quot;: &quot;true&quot;,
+            &quot;owasp_protection&quot;: &quot;true&quot;,
+            &quot;cc_protection&quot;: &quot;true&quot;,
+            &quot;https&quot;: &quot;false&quot;
+        },
+        {
+            &quot;domain&quot;: &quot;demo.jxwaf.top&quot;,
+            &quot;http&quot;: &quot;true&quot;,
+            &quot;custom_protection&quot;: &quot;false&quot;,
+            &quot;owasp_protection&quot;: &quot;true&quot;,
+            &quot;cc_protection&quot;: &quot;true&quot;,
+            &quot;https&quot;: &quot;true&quot;
+        }
+    ],
+    &quot;result&quot;: true
+}
+</code></pre></div><h2 id="获取域名详细信息"><a href="#获取域名详细信息" class="header-anchor">#</a> 获取域名详细信息</h2> <p>API地址:</p> <p>https://api.jxwaf.com/api/waf_get_domain</p> <p>参数:</p> <div class="language- extra-class"><pre class="language-text"><code>{&quot;api_key&quot;:&quot;&quot;,&quot;api_password&quot;:&quot;&quot;,&quot;domain&quot;:&quot;demo.jxwaf.top&quot;}
+</code></pre></div><p>结果:</p> <div class="language- extra-class"><pre class="language-text"><code>{
+    &quot;message&quot;: {
+        &quot;public_key&quot;: null,
+        &quot;domain&quot;: &quot;demo.jxwaf.top&quot;,
+        &quot;http&quot;: &quot;true&quot;,
+        &quot;redirect_https&quot;: &quot;false&quot;,
+        &quot;source_ip&quot;: &quot;1.1.1.1&quot;,
+        &quot;private_key&quot;: null,
+        &quot;proxy_ip&quot;: &quot;&quot;,
+        &quot;proxy&quot;: &quot;false&quot;,
+        &quot;https&quot;: &quot;false&quot;,
+        &quot;enc_https&quot;: &quot;false&quot;,
+        &quot;source_http_port&quot;: &quot;80&quot;
+    },
+    &quot;result&quot;: true
+}
+</code></pre></div><h2 id="删除域名"><a href="#删除域名" class="header-anchor">#</a> 删除域名</h2> <p>API地址:</p> <p>https://api.jxwaf.com/api/waf_del_domain</p> <p>参数:</p> <div class="language- extra-class"><pre class="language-text"><code>{&quot;api_key&quot;:&quot;&quot;,&quot;api_password&quot;:&quot;&quot;,&quot;domain&quot;:&quot;demo.jxwaf.top&quot;}
+</code></pre></div><p>结果:</p> <div class="language- extra-class"><pre class="language-text"><code>{
+    &quot;message&quot;: &quot;del success&quot;,
+    &quot;result&quot;: true
+}
+</code></pre></div><h2 id="新建域名"><a href="#新建域名" class="header-anchor">#</a> 新建域名</h2> <p>API地址:</p> <p>https://api.jxwaf.com/api/waf_create_domain</p> <p>参数:</p> <div class="language- extra-class"><pre class="language-text"><code>{&quot;api_key&quot;:&quot;&quot;,&quot;api_password&quot;:&quot;&quot;,&quot;source_http_port&quot;:&quot;80&quot;,&quot;proxy&quot;:&quot;true&quot;,&quot;redirect_https&quot;:&quot;true&quot;,&quot;enc_https&quot;:&quot;true&quot;,&quot;domain&quot;:&quot;demo.jxwaf.top&quot;,&quot;public_key&quot;:&quot;123&quot;,&quot;private_key&quot;:&quot;456&quot;,&quot;proxy_ip&quot;:&quot;1.2.3.4&quot;,&quot;source_ip&quot;:&quot;1.1.1.1&quot;,&quot;http&quot;:&quot;true&quot;,&quot;https&quot;:&quot;true&quot;}
+</code></pre></div><table><thead><tr><th>参数</th> <th>描述</th></tr></thead> <tbody><tr><td>domain</td> <td>域名</td></tr> <tr><td>http</td> <td>如果支持http访问，则值为&quot;true&quot;，否则为&quot;false&quot;</td></tr> <tr><td>https</td> <td>如果支持https访问，则值为&quot;true&quot;，否则为&quot;false&quot;</td></tr> <tr><td>source_http_port</td> <td>源服务器端口（仅支持http回源）</td></tr> <tr><td>redirect_https</td> <td>是否开启http强制跳转https，是则值为&quot;true&quot;,否则为&quot;false&quot;</td></tr> <tr><td>enc_https</td> <td>是否开启私钥AES加密，是则值为&quot;true&quot;,否则为&quot;false&quot;</td></tr> <tr><td>proxy</td> <td>WAF是否存在代理，是则值为&quot;true&quot;,否则为&quot;false&quot;</td></tr> <tr><td>proxy_ip</td> <td>代理地址,支持子网掩码，英文逗号分割</td></tr></tbody></table> <p>不清楚的可以查看控制台提交的请求参数</p> <p>结果:</p> <div class="language- extra-class"><pre class="language-text"><code>{
+    &quot;message&quot;: &quot;create success&quot;,
+    &quot;result&quot;: true
+}
+</code></pre></div><h2 id="编辑域名"><a href="#编辑域名" class="header-anchor">#</a> 编辑域名</h2> <p>API地址:</p> <p>https://api.jxwaf.com/api/waf_edit_domain</p> <p>参数:</p> <div class="language- extra-class"><pre class="language-text"><code>{&quot;api_key&quot;:&quot;&quot;,&quot;api_password&quot;:&quot;&quot;,&quot;source_http_port&quot;:&quot;80&quot;,&quot;proxy&quot;:&quot;false&quot;,&quot;redirect_https&quot;:&quot;true&quot;,&quot;enc_https&quot;:&quot;true&quot;,&quot;domain&quot;:&quot;demo.jxwaf.top&quot;,&quot;public_key&quot;:&quot;123&quot;,&quot;private_key&quot;:&quot;456&quot;,&quot;proxy_ip&quot;:&quot;1.1.3.4&quot;,&quot;source_ip&quot;:&quot;1.1.1.2&quot;,&quot;http&quot;:&quot;true&quot;,&quot;https&quot;:&quot;true&quot;}
+</code></pre></div><table><thead><tr><th>参数</th> <th>描述</th></tr></thead> <tbody><tr><td>domain</td> <td>域名</td></tr> <tr><td>http</td> <td>如果支持http访问，则值为&quot;true&quot;，否则为&quot;false&quot;</td></tr> <tr><td>https</td> <td>如果支持https访问，则值为&quot;true&quot;，否则为&quot;false&quot;</td></tr> <tr><td>source_http_port</td> <td>源服务器端口（仅支持http回源）</td></tr> <tr><td>redirect_https</td> <td>是否开启http强制跳转https，是则值为&quot;true&quot;,否则为&quot;false&quot;</td></tr> <tr><td>enc_https</td> <td>是否开启私钥AES加密，是则值为&quot;true&quot;,否则为&quot;false&quot;</td></tr> <tr><td>proxy</td> <td>WAF是否存在代理，是则值为&quot;true&quot;,否则为&quot;false&quot;</td></tr> <tr><td>proxy_ip</td> <td>代理地址,支持子网掩码，英文逗号分割</td></tr></tbody></table> <p>不清楚的可以查看控制台提交的请求参数</p> <p>结果:</p> <div class="language- extra-class"><pre class="language-text"><code>{
+    &quot;message&quot;: &quot;edit success&quot;,
+    &quot;result&quot;: true
+}
+</code></pre></div><h2 id="获取域名防护配置"><a href="#获取域名防护配置" class="header-anchor">#</a> 获取域名防护配置</h2> <p>API地址:</p> <p>https://api.jxwaf.com/api/waf_get_protection</p> <p>参数:</p> <div class="language- extra-class"><pre class="language-text"><code>{&quot;api_key&quot;:&quot;&quot;,&quot;api_password&quot;:&quot;&quot;,&quot;domain&quot;:&quot;demo.jxwaf.top&quot;}
+</code></pre></div><p>结果:</p> <div class="language- extra-class"><pre class="language-text"><code>{
+    &quot;message&quot;: {
+        &quot;domain&quot;: &quot;demo.jxwaf.top&quot;,
+        &quot;custom_protection&quot;: &quot;false&quot;,
+        &quot;owasp_protection&quot;: &quot;true&quot;,
+        &quot;attack_ip_protection&quot;: &quot;false&quot;,
+        &quot;cc_protection&quot;: &quot;false&quot;,
+        &quot;ip_config&quot;: &quot;false&quot;,
+        &quot;page_custom&quot;: &quot;false&quot;,
+        &quot;geoip&quot;: &quot;false&quot;,
+        &quot;geo_protection&quot;: &quot;false&quot;
+    },
+    &quot;result&quot;: true
+}
+</code></pre></div><h2 id="修改域名防护配置"><a href="#修改域名防护配置" class="header-anchor">#</a> 修改域名防护配置</h2> <p>API地址:</p> <p>https://api.jxwaf.com/api/waf_edit_protection</p> <p>参数:</p> <div class="language- extra-class"><pre class="language-text"><code>{&quot;api_key&quot;:&quot;&quot;,&quot;api_password&quot;:&quot;&quot;,&quot;domain&quot;:&quot;demo.jxwaf.top&quot;,&quot;custom_protection&quot;:&quot;false&quot;,&quot;owasp_protection&quot;:&quot;true&quot;,&quot;attack_ip_protection&quot;:&quot;false&quot;,&quot;cc_protection&quot;:&quot;false&quot;,&quot;ip_config&quot;:&quot;false&quot;,&quot;page_custom&quot;:&quot;false&quot;,&quot;geoip&quot;:&quot;false&quot;,&quot;geo_protection&quot;:&quot;false&quot;}
+</code></pre></div><p>结果:</p> <div class="language- extra-class"><pre class="language-text"><code>{
+    &quot;message&quot;: &quot;edit success&quot;,
+    &quot;result&quot;: true
+}
+</code></pre></div><h2 id="获取cc攻击防护配置"><a href="#获取cc攻击防护配置" class="header-anchor">#</a> 获取CC攻击防护配置</h2> <p>API地址:</p> <p>https://api.jxwaf.com/api/waf_get_cc_protection</p> <p>参数:</p> <div class="language- extra-class"><pre class="language-text"><code>{&quot;api_key&quot;:&quot;&quot;,&quot;api_password&quot;:&quot;&quot;,&quot;domain&quot;:&quot;demo.jxwaf.top&quot;}
+</code></pre></div><p>结果:</p> <div class="language- extra-class"><pre class="language-text"><code>{
+    &quot;message&quot;: {
+        &quot;count&quot;: &quot;600&quot;,
+        &quot;domain_qps&quot;: &quot;2000&quot;,
+        &quot;ip_qps&quot;: &quot;10&quot;,
+        &quot;black_ip_time&quot;: &quot;60&quot;,
+        &quot;attack_ip_expire_qps&quot;: &quot;5&quot;,
+        &quot;bot_check&quot;: &quot;true&quot;,
+        &quot;attack_count&quot;: &quot;100&quot;,
+        &quot;ip_expire_qps&quot;: &quot;10&quot;,
+        &quot;attack_ip_qps&quot;: &quot;5&quot;,
+        &quot;attack_black_ip_time&quot;: &quot;300&quot;,
+        &quot;all_request_bot_check&quot;: &quot;false&quot;
+    },
+    &quot;result&quot;: true
+}
+</code></pre></div><h2 id="修改cc攻击防护配置"><a href="#修改cc攻击防护配置" class="header-anchor">#</a> 修改CC攻击防护配置</h2> <p>API地址:</p> <p>https://api.jxwaf.com/api/waf_edit_protection</p> <p>参数:</p> <div class="language- extra-class"><pre class="language-text"><code>{&quot;api_key&quot;:&quot;&quot;,&quot;api_password&quot;:&quot;&quot;,&quot;count&quot;:&quot;600&quot;,&quot;domain_qps&quot;:&quot;2000&quot;,&quot;ip_qps&quot;:&quot;10&quot;,&quot;black_ip_time&quot;:&quot;60&quot;,&quot;attack_ip_expire_qps&quot;:&quot;5&quot;,&quot;bot_check&quot;:&quot;true&quot;,&quot;attack_count&quot;:&quot;100&quot;,&quot;ip_expire_qps&quot;:&quot;10&quot;,&quot;attack_ip_qps&quot;:&quot;5&quot;,&quot;attack_black_ip_time&quot;:&quot;300&quot;,&quot;all_request_bot_check&quot;:&quot;false&quot;,&quot;domain&quot;:&quot;demo.jxwaf.top&quot;}
+</code></pre></div><p>结果:</p> <div class="language- extra-class"><pre class="language-text"><code>{
+    &quot;message&quot;: &quot;edit success&quot;,
+    &quot;result&quot;: true
+}
+</code></pre></div><h2 id="获取web攻击防护配置"><a href="#获取web攻击防护配置" class="header-anchor">#</a> 获取Web攻击防护配置</h2> <p>API地址:</p> <p>https://api.jxwaf.com/api/api_get_owasp_check</p> <p>参数:</p> <div class="language- extra-class"><pre class="language-text"><code>{&quot;api_key&quot;:&quot;&quot;,&quot;api_password&quot;:&quot;&quot;,&quot;domain&quot;:&quot;demo.jxwaf.top&quot;}
+</code></pre></div><p>结果:</p> <div class="language- extra-class"><pre class="language-text"><code>{
+    &quot;message&quot;: {
+        &quot;white_request_bypass&quot;: &quot;true&quot;,
+        &quot;sql_check&quot;: &quot;true&quot;,
+        &quot;command_inject_check&quot;: &quot;true&quot;,
+        &quot;file_traversal_check_time&quot;: &quot;60&quot;,
+        &quot;virtual_patch_check&quot;: &quot;true&quot;,
+        &quot;upload_check_rule&quot;: &quot;(.jpg|.png)$&quot;,
+        &quot;white_request_log&quot;: &quot;true&quot;,
+        &quot;webshell_check&quot;: &quot;true&quot;,
+        &quot;file_traversal_check_count&quot;: &quot;60&quot;,
+        &quot;black_attack_ip&quot;: &quot;true&quot;,
+        &quot;upload_check&quot;: &quot;false&quot;,
+        &quot;attack_request_log&quot;: &quot;true&quot;,
+        &quot;xss_check&quot;: &quot;true&quot;,
+        &quot;file_traversal_check&quot;: &quot;false&quot;,
+        &quot;file_traversal_check_ratio&quot;: &quot;0.7&quot;,
+        &quot;file_traversal_black_time&quot;: &quot;3600&quot;,
+        &quot;sensitive_file_check&quot;: &quot;true&quot;,
+        &quot;anomaly_request_log&quot;: &quot;true&quot;,
+        &quot;directory_traversal_check&quot;: &quot;true&quot;,
+        &quot;owasp_protection_mode&quot;: &quot;true&quot;
+    },
+    &quot;result&quot;: true
+}
+</code></pre></div><h2 id="修改web攻击防护配置"><a href="#修改web攻击防护配置" class="header-anchor">#</a> 修改Web攻击防护配置</h2> <p>API地址:</p> <p>https://api.jxwaf.com/api/waf_edit_owasp_check</p> <p>参数:</p> <div class="language- extra-class"><pre class="language-text"><code>{&quot;api_key&quot;:&quot;&quot;,&quot;api_password&quot;:&quot;&quot;,&quot;white_request_bypass&quot;:&quot;true&quot;,&quot;sql_check&quot;:&quot;true&quot;,&quot;command_inject_check&quot;:&quot;true&quot;,&quot;file_traversal_check_time&quot;:&quot;60&quot;,&quot;virtual_patch_check&quot;:&quot;true&quot;,&quot;upload_check_rule&quot;:&quot;(.jpg|.png)$&quot;,&quot;white_request_log&quot;:&quot;true&quot;,&quot;webshell_check&quot;:&quot;true&quot;,&quot;file_traversal_check_count&quot;:&quot;60&quot;,&quot;black_attack_ip&quot;:&quot;true&quot;,&quot;upload_check&quot;:&quot;false&quot;,&quot;attack_request_log&quot;:&quot;true&quot;,&quot;xss_check&quot;:&quot;true&quot;,&quot;file_traversal_check&quot;:&quot;false&quot;,&quot;file_traversal_check_ratio&quot;:&quot;0.7&quot;,&quot;file_traversal_black_time&quot;:&quot;3600&quot;,&quot;sensitive_file_check&quot;:&quot;true&quot;,&quot;anomaly_request_log&quot;:&quot;true&quot;,&quot;directory_traversal_check&quot;:&quot;true&quot;,&quot;owasp_protection_mode&quot;:&quot;true&quot;,&quot;domain&quot;:&quot;demo.jxwaf.top&quot;}
+</code></pre></div><p>结果:</p> <div class="language- extra-class"><pre class="language-text"><code>{
+    &quot;message&quot;: &quot;edit success&quot;,
+    &quot;result&quot;: true
+}
+</code></pre></div><h2 id="创建ip黑白名单"><a href="#创建ip黑白名单" class="header-anchor">#</a> 创建IP黑白名单</h2> <p>API地址:</p> <p>https://api.jxwaf.com/api/waf_create_ip_rule</p> <p>参数:</p> <div class="language- extra-class"><pre class="language-text"><code>{&quot;api_key&quot;:&quot;&quot;,&quot;api_password&quot;:&quot;&quot;,&quot;rule_action&quot;:&quot;deny&quot;,&quot;ip&quot;:&quot;1.2.3.4&quot;,&quot;domain&quot;:&quot;demo.jxwaf.top&quot;}
+
+</code></pre></div><p>结果:</p> <div class="language- extra-class"><pre class="language-text"><code>{&quot;message&quot;: &quot;create success&quot;, &quot;result&quot;: true}
+</code></pre></div><h2 id="删除ip黑白名单"><a href="#删除ip黑白名单" class="header-anchor">#</a> 删除IP黑白名单</h2> <p>API地址:</p> <p>https://api.jxwaf.com/api/waf_del_ip_rule</p> <p>参数:</p> <div class="language- extra-class"><pre class="language-text"><code>{&quot;api_key&quot;:&quot;&quot;,&quot;api_password&quot;:&quot;&quot;,&quot;domain&quot;:&quot;demo.jxwaf.top&quot;,&quot;ip&quot;:&quot;1.2.3.4&quot;}
+</code></pre></div><p>结果:</p> <div class="language- extra-class"><pre class="language-text"><code>{&quot;message&quot;: &quot;del success&quot;, &quot;result&quot;: true}
+</code></pre></div><h2 id="查看ip黑白名单列表"><a href="#查看ip黑白名单列表" class="header-anchor">#</a> 查看IP黑白名单列表</h2> <p>API地址:</p> <p>https://api.jxwaf.com/api/waf_get_ip_rule_list</p> <p>参数:</p> <div class="language- extra-class"><pre class="language-text"><code>{&quot;api_key&quot;:&quot;&quot;,&quot;api_password&quot;:&quot;&quot;,&quot;domain&quot;:&quot;demo.jxwaf.top&quot;}
+</code></pre></div><p>结果:</p> <div class="language- extra-class"><pre class="language-text"><code>{
+    &quot;message&quot;: [
+        {
+            &quot;rule_action&quot;: &quot;deny&quot;,
+            &quot;ip&quot;: &quot;1.1.1.1&quot;,
+            &quot;time&quot;: &quot;2020-03-02T17:35:12.802&quot;
+        }
+    ],
+    &quot;result&quot;: true
+}
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/config.html" class="prev">
+        配置指南
+      </a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.797f81f3.js" defer></script><script src="/assets/js/2.914497f9.js" defer></script><script src="/assets/js/6.a36b8f3e.js" defer></script>
+  </body>
+</html>
