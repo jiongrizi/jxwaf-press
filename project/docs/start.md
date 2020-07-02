@@ -1,5 +1,9 @@
 ## 快速入门
 
+## Environment 环境
+- Centos 7
+- Openresty 1.13.6.2
+
 ## 步骤 1: WAF 下载安装
 
 #### 安装(已包含 openresty 安装包)
@@ -7,6 +11,7 @@
 将代码下载到/tmp 目录，运行 install_waf.sh 文件，jxwaf 将安装在/opt/jxwaf 目录，具体如下:
 
 1.  \$ cd /tmp
+> \$ yum install git (若无git的需先运营本行命令安装git)
 2.  \$ git clone https://github.com/jx-sec/jxwaf.git
 3.  \$ cd jxwaf
 4.  \$ sh install_waf.sh
