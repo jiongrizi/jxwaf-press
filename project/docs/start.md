@@ -59,21 +59,31 @@ auth result:
 try to connect jxwaf server auth api_key and api_password,result is True
 ```
 
-10. \$ /opt/jxwaf/nginx/sbin/nginx
+10. \$ /opt/jxwaf/nginx/sbin/nginx   
+启动 openresty
 
-11. 启动 openresty,openresty 会在启动或者 reload 的时候自动到 jxwaf 管理中心拉取用户配置的最新规则,之后会定期同步配置,周期可在全局配置页面设置。
+11. openresty 会在启动或者 reload 的时候自动到 jxwaf 管理中心拉取用户配置的最新规则,之后会定期同步配置,周期可在全局配置页面设置。
 
-注意：JXWAF 是通过控制台或者 tools 目录下的脚本进行配置，除非您是专业人士，否则请勿擅自修改相关的配置文件
+> 注意：JXWAF 是通过控制台或者 tools 目录下的脚本进行配置，除非您是专业人士，否则请勿擅自修改相关的配置文件
 
 ## 步骤 2: 添加网站
 
 进入控制台后，点击 “网站配置” 进入网站配置页面，点击 “添加网站” 新增要防护的网站。
 
+***如果你的网站是HTTP的，请看下图***
+![avatar](/images/7.png)
+
+
+***如果你的网站是HTTPS的，请看下图***
+
 ![avatar](/images/4.png)
+> 了解配置详情，请看 [配置指南->域名配置](/config.html#配置指南)
 
 创建域名后，可以在“网站配置” 页面看到域名的状态
 
 ![avatar](/images/5.png)
+
+
 
 默认情况下，新建域名仅开启 Web 应用安全防护，可通过“防护配置”页面进行修改。
 
