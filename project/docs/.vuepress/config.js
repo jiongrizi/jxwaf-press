@@ -7,17 +7,18 @@ module.exports = {
   themeConfig: {
     nav: [
       { text: "首页", link: "/" },
-      {
-        text: "Guide",
-        items: [
-          { text: "JXWAF介绍", link: "/introduction" },
-          { text: "快速入门", link: "/start" },
-          { text: "配置指南", link: "/config" },
-          { text: "API接口", link: "/api" }
-        ]
-      },
+      { text: "最佳实践", link: "/best-practice" },
+      // {
+      //   text: "Guide",
+      //   items: [
+      //     { text: "JXWAF介绍", link: "/introduction" },
+      //     { text: "快速入门", link: "/start" },
+      //     { text: "配置指南", link: "/config" },
+      //     { text: "API接口", link: "/api" }
+      //   ]
+      // },
       { text: "GitHub", link: "https://github.com/jx-sec/jxwaf" }
     ],
-    sidebar: ["/", "/introduction", "/start", "/config", "/api"]
+    sidebar: ["/", "/best-practice"]
   }
 };

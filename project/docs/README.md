@@ -1,7 +1,7 @@
 ---
 home: true
 heroImage: /images/logo.png
-actionText: 快速入门 →
-actionLink: /introduction
+actionText: 最佳实践
+actionLink: /best-practice
 footer: MIT Licensed | Copyright © 2020-present Evan You
 ---
