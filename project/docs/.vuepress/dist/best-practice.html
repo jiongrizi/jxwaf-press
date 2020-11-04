@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="zh-CN">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>JXWAF最佳实践 | JXWAF</title>
-    <meta name="description" content="下一代web应用防火墙">
+    <title>JXWAF 最佳实践 | JXWAF</title>
+    <meta name="description" content="JXWAF 是一款开源 WEB 应用防火墙">
     <meta name="generator" content="VuePress 1.3.1">
     <link rel="icon" href="./images/logo.png">
     
-    <link rel="preload" href="/assets/css/0.styles.f6e18c68.css" as="style"><link rel="preload" href="/assets/js/app.131acddb.js" as="script"><link rel="preload" href="/assets/js/2.1c89a514.js" as="script"><link rel="preload" href="/assets/js/3.bdaa4f7b.js" as="script"><link rel="prefetch" href="/assets/js/10.747df7ef.js"><link rel="prefetch" href="/assets/js/11.bf370ed3.js"><link rel="prefetch" href="/assets/js/12.33ebfe2e.js"><link rel="prefetch" href="/assets/js/4.86c7b42e.js"><link rel="prefetch" href="/assets/js/5.060d6d50.js"><link rel="prefetch" href="/assets/js/6.bb257439.js"><link rel="prefetch" href="/assets/js/7.88e5089b.js"><link rel="prefetch" href="/assets/js/8.761e9c8b.js"><link rel="prefetch" href="/assets/js/9.761a4dbd.js">
+    <link rel="preload" href="/assets/css/0.styles.f6e18c68.css" as="style"><link rel="preload" href="/assets/js/app.eda64e37.js" as="script"><link rel="preload" href="/assets/js/2.de461551.js" as="script"><link rel="preload" href="/assets/js/3.0bbf76fe.js" as="script"><link rel="prefetch" href="/assets/js/10.f5eaf63b.js"><link rel="prefetch" href="/assets/js/11.160b7e55.js"><link rel="prefetch" href="/assets/js/12.46e48f0f.js"><link rel="prefetch" href="/assets/js/13.89b81c50.js"><link rel="prefetch" href="/assets/js/14.34791f39.js"><link rel="prefetch" href="/assets/js/4.e8a291a2.js"><link rel="prefetch" href="/assets/js/5.8ce0b433.js"><link rel="prefetch" href="/assets/js/6.38437ca2.js"><link rel="prefetch" href="/assets/js/7.b8ca1c99.js"><link rel="prefetch" href="/assets/js/8.ac7f681b.js"><link rel="prefetch" href="/assets/js/9.81d94d1c.js">
     <link rel="stylesheet" href="/assets/css/0.styles.f6e18c68.css">
   </head>
   <body>
@@ -18,16 +18,24 @@
   最佳实践
 </a></div><div class="nav-item"><a href="https://github.com/jx-sec/jxwaf" target="_blank" rel="noopener noreferrer" class="nav-link external">
   GitHub
-  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Select language" class="dropdown-title"><span class="title">Languages</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/best-practice.html" class="nav-link router-link-exact-active router-link-active">
+  简体中文
+</a></li><li class="dropdown-item"><!----> <a href="/en/best-practice.html" class="nav-link">
+  English
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
   首页
 </a></div><div class="nav-item"><a href="/best-practice.html" class="nav-link router-link-exact-active router-link-active">
   最佳实践
 </a></div><div class="nav-item"><a href="https://github.com/jx-sec/jxwaf" target="_blank" rel="noopener noreferrer" class="nav-link external">
   GitHub
-  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/" class="sidebar-link">Home</a></li><li><a href="/best-practice.html" class="active sidebar-link">JXWAF最佳实践</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/best-practice.html#部署" class="sidebar-link">部署</a></li><li class="sidebar-sub-header"><a href="/best-practice.html#配置" class="sidebar-link">配置</a></li></ul></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="jxwaf最佳实践"><a href="#jxwaf最佳实践" class="header-anchor">#</a> JXWAF最佳实践</h1> <h2 id="部署"><a href="#部署" class="header-anchor">#</a> 部署</h2> <h4 id="架构图"><a href="#架构图" class="header-anchor">#</a> 架构图</h4> <p><img src="/assets/img/jxwaf-mini3.b202baea.png" alt=""></p> <ul><li>蓝色为jxwaf节点的部署位置</li> <li>日志对接的是阿里云日志服务</li></ul> <h4 id="环境准备"><a href="#环境准备" class="header-anchor">#</a> 环境准备</h4> <ul><li>jxwaf节点
-<ul><li>Centos 7.4</li></ul></li> <li>jxwaf控制台
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Select language" class="dropdown-title"><span class="title">Languages</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/best-practice.html" class="nav-link router-link-exact-active router-link-active">
+  简体中文
+</a></li><li class="dropdown-item"><!----> <a href="/en/best-practice.html" class="nav-link">
+  English
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/" class="sidebar-link">Home</a></li><li><a href="/best-practice.html" class="active sidebar-link">JXWAF 最佳实践</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/best-practice.html#部署" class="sidebar-link">部署</a></li><li class="sidebar-sub-header"><a href="/best-practice.html#配置" class="sidebar-link">配置</a></li></ul></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="jxwaf-最佳实践"><a href="#jxwaf-最佳实践" class="header-anchor">#</a> JXWAF 最佳实践</h1> <h2 id="部署"><a href="#部署" class="header-anchor">#</a> 部署</h2> <h4 id="架构图"><a href="#架构图" class="header-anchor">#</a> 架构图</h4> <p><img src="/assets/img/jxwaf-mini3.b202baea.png" alt=""></p> <ul><li>蓝色为 jxwaf 节点的部署位置</li> <li>日志对接的是阿里云日志服务</li></ul> <h4 id="环境准备"><a href="#环境准备" class="header-anchor">#</a> 环境准备</h4> <ul><li>jxwaf 节点
+<ul><li>Centos 7.4</li></ul></li> <li>jxwaf 控制台
 <ul><li>Centos 7.4</li></ul></li> <li>数据库
-<ul><li>Mysql/Mariadb</li></ul></li></ul> <h4 id="快速部署-源码部署"><a href="#快速部署-源码部署" class="header-anchor">#</a> 快速部署(源码部署)</h4> <p><strong>控制台部署</strong></p> <p>需要先部署好数据库，假设数据库地址为192.168.1.1，端口为3306，账号为root，密码为123456，数据库为jxwaf</p> <ol><li>$ yum install git -y</li> <li>$ cd /opt</li> <li>$ git clone https://github.com/jx-sec/jxwaf-mini-server.git</li> <li>$ cd jxwaf-mini-server/</li> <li>$ sh install.sh</li> <li>$ pip install -r requirements.txt</li> <li>$ vim jxwaf2018/settings.py</li></ol> <div class="language- extra-class"><pre class="language-text"><code># Database
+<ul><li>Mysql/Mariadb</li></ul></li></ul> <h4 id="快速部署-源码部署"><a href="#快速部署-源码部署" class="header-anchor">#</a> 快速部署(源码部署)</h4> <p><strong>控制台部署</strong></p> <p>需要先部署好数据库，假设数据库地址为 192.168.1.1，端口为 3306，账号为 root，密码为 123456，数据库为 jxwaf</p> <ol><li>$ yum install git -y</li> <li>$ cd /opt</li> <li>$ git clone https://github.com/jx-sec/jxwaf-mini-server.git</li> <li>$ cd jxwaf-mini-server/</li> <li>$ sh install.sh</li> <li>$ pip install -r requirements.txt</li> <li>$ vim jxwaf2018/settings.py</li></ol> <div class="language- extra-class"><pre class="language-text"><code># Database
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
 #DATABASES = {
 #    'default': {
@@ -47,16 +55,16 @@ DATABASES = {
  }
 }
 
-</code></pre></div><ol start="6"><li>$ python manage.py makemigrations</li> <li>$ python manage.py migrate</li> <li>$ nohup python manage.py runserver 0.0.0.0:80 &amp;</li> <li>假设服务器IP为10.0.0.1,则打开网址 http://10.0.0.1 进行注册,注册完后登录账号,在 WAF更新-&gt; 语义引擎更新 中选择 语义引擎版本 加载。在 WAF更新-&gt; 人机识别更新 中 选择 人机识别版本 加载，同时点击 KEY更新 加载人机识别对应的 KEY</li> <li>生产环境建议通过nginx+uwsgi部署，详情可参考文档 https://www.runoob.com/django/django-nginx-uwsgi.html 或自行百度。直接部署默认为调试模式，不要直接对公网开放访问。</li> <li>注册账号后，可通过 jxwaf2018/settings.py 文件中的 OPEN_REGIST = True 修改为 OPEN_REGIST = False 来关闭账号注册功能</li></ol> <p><strong>节点部署</strong></p> <ol><li>$ yum install git -y</li> <li>$ cd /tmp</li> <li>$ git clone https://github.com/jx-sec/jxwaf.git</li></ol> <div class="language- extra-class"><pre class="language-text"><code>提示: 国内服务器github下载较慢，提供百度网盘下载
-https://pan.baidu.com/s/1WAt077rrOSNZj1E4X1u6pw 提取码: vcgw 
+</code></pre></div><ol start="6"><li>$ python manage.py makemigrations</li> <li>$ python manage.py migrate</li> <li>$ nohup python manage.py runserver 0.0.0.0:80 &amp;</li> <li>假设服务器 IP 为 10.0.0.1,则打开网址 http://10.0.0.1 进行注册,注册完后登录账号,在 WAF 更新-&gt; 语义引擎更新 中选择 语义引擎版本 加载。在 WAF 更新-&gt; 人机识别更新 中 选择 人机识别版本 加载，同时点击 KEY 更新 加载人机识别对应的 KEY</li> <li>生产环境建议通过 nginx+uwsgi 部署，详情可参考文档 https://www.runoob.com/django/django-nginx-uwsgi.html 或自行百度。直接部署默认为调试模式，不要直接对公网开放访问。</li> <li>注册账号后，可通过 jxwaf2018/settings.py 文件中的 OPEN_REGIST = True 修改为 OPEN_REGIST = False 来关闭账号注册功能</li></ol> <p><strong>节点部署</strong></p> <ol><li>$ yum install git -y</li> <li>$ cd /tmp</li> <li>$ git clone https://github.com/jx-sec/jxwaf.git</li></ol> <div class="language- extra-class"><pre class="language-text"><code>提示: 国内服务器github下载较慢，提供百度网盘下载
+https://pan.baidu.com/s/1WAt077rrOSNZj1E4X1u6pw 提取码: vcgw
 </code></pre></div><ol start="4"><li>$ cd jxwaf</li> <li>$ sh install_waf.sh</li> <li>$ 运行后显示类似信息即安装成功:</li></ol> <div class="language- extra-class"><pre class="language-text"><code>nginx: the configuration file /opt/jxwaf/nginx/conf/nginx.conf syntax is ok
 nginx: configuration file /opt/jxwaf/nginx/conf/nginx.conf test is successful
-</code></pre></div><ol start="7"><li>假设管理中心IP为10.0.0.1,则打开网址 http://10.0.0.1 进行注册,注册完后登录账号,在WAF管理下的全局配置页面获取&quot;api key&quot;和&quot;api password&quot;</li> <li>$ cd tools</li> <li>$ python jxwaf_local_init.py --api_key=a2dde899-96a7-40s2-88ba-31f1f75f1552 --api_password=653cbbde-1cac-11ea-978f-2e728ce88125 --waf_server=http://10.0.0.1</li> <li>api_key 为全局配置页面中&quot;api key&quot;的值，api_password为&quot;api password&quot;的值，运行完成后，显示类似信息即安装成功</li></ol> <div class="language- extra-class"><pre class="language-text"><code>config file:  /opt/jxwaf/nginx/conf/jxwaf/jxwaf_config.json
+</code></pre></div><ol start="7"><li>假设管理中心 IP 为 10.0.0.1,则打开网址 http://10.0.0.1 进行注册,注册完后登录账号,在 WAF 管理下的全局配置页面获取&quot;api key&quot;和&quot;api password&quot;</li> <li>$ cd tools</li> <li>$ python jxwaf_local_init.py --api_key=a2dde899-96a7-40s2-88ba-31f1f75f1552 --api_password=653cbbde-1cac-11ea-978f-2e728ce88125 --waf_server=http://10.0.0.1</li> <li>api_key 为全局配置页面中&quot;api key&quot;的值，api_password 为&quot;api password&quot;的值，运行完成后，显示类似信息即安装成功</li></ol> <div class="language- extra-class"><pre class="language-text"><code>config file:  /opt/jxwaf/nginx/conf/jxwaf/jxwaf_config.json
 config result:
-init success,access_id is d7b9fe12-606c-4ca8-bcb5-3dde9853e5f4,access_secret is af5cfc8d-d564-44dd-ba11-f1fecdf95706 
+init success,access_id is d7b9fe12-606c-4ca8-bcb5-3dde9853e5f4,access_secret is af5cfc8d-d564-44dd-ba11-f1fecdf95706
 auth result:
 try to connect jxwaf server auth api_key and api_password,result is True
-</code></pre></div><ol start="11"><li>$ /opt/jxwaf/nginx/sbin/nginx</li> <li>启动openresty,openresty会在启动或者reload的时候自动到jxwaf管理中心拉取用户配置的最新规则,之后会定期同步配置,周期可在全局配置页面设置。</li></ol> <h4 id="阿里云日志部署"><a href="#阿里云日志部署" class="header-anchor">#</a> 阿里云日志部署</h4> <ol><li>创建Project</li></ol> <p><img src="/assets/img/project.16e25aa5.jpg" alt=""></p> <ol start="2"><li>创建Logstore</li></ol> <p><img src="/assets/img/logstore.f404571c.jpg" alt=""></p> <ol start="3"><li>安装logtail</li></ol> <p>Logtail客户端是阿里云日志服务提供的日志采集客户端</p> <p><img src="/assets/img/create1.d5d2ec2a.jpg" alt=""></p> <p><img src="/assets/img/create2.45bbdeb8.jpg" alt=""></p> <p><img src="/assets/img/create3.145d9eca.jpg" alt=""></p> <ol start="4"><li>$ wget http://logtail-release-cn-shenzhen.oss-cn-shenzhen.aliyuncs.com/linux64/logtail.sh -O logtail.sh; chmod 755 logtail.sh; ./logtail.sh install cn-shenzhen-internet</li></ol> <div class="language- extra-class"><pre class="language-text"><code>logtail-linux64.tar.gz download success
+</code></pre></div><ol start="11"><li>$ /opt/jxwaf/nginx/sbin/nginx</li> <li>启动 openresty,openresty 会在启动或者 reload 的时候自动到 jxwaf 管理中心拉取用户配置的最新规则,之后会定期同步配置,周期可在全局配置页面设置。</li></ol> <h4 id="阿里云日志部署"><a href="#阿里云日志部署" class="header-anchor">#</a> 阿里云日志部署</h4> <ol><li>创建 Project</li></ol> <p><img src="/assets/img/project.16e25aa5.jpg" alt=""></p> <ol start="2"><li>创建 Logstore</li></ol> <p><img src="/assets/img/logstore.f404571c.jpg" alt=""></p> <ol start="3"><li>安装 logtail</li></ol> <p>Logtail 客户端是阿里云日志服务提供的日志采集客户端</p> <p><img src="/assets/img/create1.d5d2ec2a.jpg" alt=""></p> <p><img src="/assets/img/create2.45bbdeb8.jpg" alt=""></p> <p><img src="/assets/img/create3.145d9eca.jpg" alt=""></p> <ol start="4"><li>$ wget http://logtail-release-cn-shenzhen.oss-cn-shenzhen.aliyuncs.com/linux64/logtail.sh -O logtail.sh; chmod 755 logtail.sh; ./logtail.sh install cn-shenzhen-internet</li></ol> <div class="language- extra-class"><pre class="language-text"><code>logtail-linux64.tar.gz download success
 install logtail files success
 chkconfig add ilogtaild success
 install logtail success
@@ -71,9 +79,9 @@ start logtail success
    &quot;os&quot; : &quot;Linux; 3.10.0-693.el7.x86_64; #1 SMP Tue Aug 22 21:09:27 UTC 2017; x86_64&quot;,
    &quot;update_time&quot; : &quot;2020-10-12 17:31:53&quot;
 }
-</code></pre></div><ol start="5"><li>创建主账号AliUid同名文件到 /etc/ilogtail/users 目录，如目录不存在请手动创建目录。一台服务器上可以配置多个主账号AliUid，例如：</li></ol> <div class="language- extra-class"><pre class="language-text"><code>touch /etc/ilogtail/users/1833192882890167
+</code></pre></div><ol start="5"><li>创建主账号 AliUid 同名文件到 /etc/ilogtail/users 目录，如目录不存在请手动创建目录。一台服务器上可以配置多个主账号 AliUid，例如：</li></ol> <div class="language- extra-class"><pre class="language-text"><code>touch /etc/ilogtail/users/1833192882890167
 touch /etc/ilogtail/users/1833192882890167
-</code></pre></div><ol start="6"><li>创建机器组，ip为步骤4中的输出，这里为172.16.16.12</li></ol> <p><img src="/assets/img/create4.b8cdfa4f.jpg" alt=""></p> <p>7.机器组创建成功
+</code></pre></div><ol start="6"><li>创建机器组，ip 为步骤 4 中的输出，这里为 172.16.16.12</li></ol> <p><img src="/assets/img/create4.b8cdfa4f.jpg" alt=""></p> <p>7.机器组创建成功
 <img src="/assets/img/create5.aa6d2ea7.jpg" alt=""></p> <ol start="8"><li>数据源设置</li></ol> <p><img src="/assets/img/create6.17da9b54.jpg" alt=""></p> <div class="language- extra-class"><pre class="language-text"><code>{
     &quot;inputs&quot;: [
         {
@@ -112,12 +120,12 @@ touch /etc/ilogtail/users/1833192882890167
     ]
 }
 </code></pre></div><ol start="9"><li>索引生成</li></ol> <p><img src="/assets/img/create7.6e1b2444.jpg" alt=""></p> <p>该步骤可以在后续手动创建，不过建议通过日志来自动生成，可参考如下设置，细节请查看后续的 配置 章节。</p> <p>在控制台 全局配置 -&gt; 日志配置</p> <p><img src="/assets/img/log.a7c1d13d.jpg" alt=""></p> <p>配置完成后，对网站发起请求，出现如下页面即日志接收成功</p> <p><img src="/assets/img/create8.14bf5d82.jpg" alt="">
-点击 自动生成索引  确定即可</p> <p><img src="/assets/img/create9.a5c0d7f3.jpg" alt=""></p> <ol start="10"><li>以上环节如出现问题请查看官方文档 https://help.aliyun.com/product/28958.html 或 找官方支持。</li></ol> <h2 id="配置"><a href="#配置" class="header-anchor">#</a> 配置</h2> <p>域名: 81.71.34.242</p> <p>业务服务器IP: 81.71.32.242</p> <h4 id="控制台配置"><a href="#控制台配置" class="header-anchor">#</a> 控制台配置</h4> <ol><li>添加网站</li></ol> <p>网站配置 -&gt;  添加网站</p> <p><img src="/assets/img/domain.90e88a40.jpg" alt=""></p> <ol start="2"><li>日志配置</li></ol> <p>全局配置 -&gt; 日志配置</p> <p><img src="/assets/img/log.a7c1d13d.jpg" alt=""></p> <ol start="3"><li>阿里云日志配置</li></ol> <p>全局配置 -&gt; 阿里云日志配置
+点击 自动生成索引 确定即可</p> <p><img src="/assets/img/create9.a5c0d7f3.jpg" alt=""></p> <ol start="10"><li>以上环节如出现问题请查看官方文档 https://help.aliyun.com/product/28958.html 或 找官方支持。</li></ol> <h2 id="配置"><a href="#配置" class="header-anchor">#</a> 配置</h2> <p>域名: 81.71.34.242</p> <p>业务服务器 IP: 81.71.32.242</p> <h4 id="控制台配置"><a href="#控制台配置" class="header-anchor">#</a> 控制台配置</h4> <ol><li>添加网站</li></ol> <p>网站配置 -&gt; 添加网站</p> <p><img src="/assets/img/domain.90e88a40.jpg" alt=""></p> <ol start="2"><li>日志配置</li></ol> <p>全局配置 -&gt; 日志配置</p> <p><img src="/assets/img/log.a7c1d13d.jpg" alt=""></p> <ol start="3"><li>阿里云日志配置</li></ol> <p>全局配置 -&gt; 阿里云日志配置
 <img src="/assets/img/ali.5d5bcd9b.jpg" alt=""></p> <ol start="4"><li>报表展示</li></ol> <p><img src="/assets/img/chart.3e1372d4.jpg" alt=""></p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
       ←
       <a href="/" class="prev router-link-active">
         Home
       </a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
-    <script src="/assets/js/app.131acddb.js" defer></script><script src="/assets/js/2.1c89a514.js" defer></script><script src="/assets/js/3.bdaa4f7b.js" defer></script>
+    <script src="/assets/js/app.eda64e37.js" defer></script><script src="/assets/js/2.de461551.js" defer></script><script src="/assets/js/3.0bbf76fe.js" defer></script>
   </body>
 </html>

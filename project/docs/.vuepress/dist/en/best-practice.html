@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>JXWAF best practices | JXWAF</title>
+    <meta name="description" content="JXWAF is an open source WEB application firewall">
+    <meta name="generator" content="VuePress 1.3.1">
+    <link rel="icon" href="./images/logo.png">
+    
+    <link rel="preload" href="/assets/css/0.styles.f6e18c68.css" as="style"><link rel="preload" href="/assets/js/app.eda64e37.js" as="script"><link rel="preload" href="/assets/js/2.de461551.js" as="script"><link rel="preload" href="/assets/js/4.e8a291a2.js" as="script"><link rel="prefetch" href="/assets/js/10.f5eaf63b.js"><link rel="prefetch" href="/assets/js/11.160b7e55.js"><link rel="prefetch" href="/assets/js/12.46e48f0f.js"><link rel="prefetch" href="/assets/js/13.89b81c50.js"><link rel="prefetch" href="/assets/js/14.34791f39.js"><link rel="prefetch" href="/assets/js/3.0bbf76fe.js"><link rel="prefetch" href="/assets/js/5.8ce0b433.js"><link rel="prefetch" href="/assets/js/6.38437ca2.js"><link rel="prefetch" href="/assets/js/7.b8ca1c99.js"><link rel="prefetch" href="/assets/js/8.ac7f681b.js"><link rel="prefetch" href="/assets/js/9.81d94d1c.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.f6e18c68.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/en/" class="home-link router-link-active"><!----> <span class="site-name">JXWAF</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/best-practice.html" class="nav-link">
+  Best practice
+</a></div><div class="nav-item"><a href="https://github.com/jx-sec/jxwaf" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Select language" class="dropdown-title"><span class="title">Languages</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/best-practice.html" class="nav-link">
+  简体中文
+</a></li><li class="dropdown-item"><!----> <a href="/en/best-practice.html" class="nav-link router-link-exact-active router-link-active">
+  English
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/best-practice.html" class="nav-link">
+  Best practice
+</a></div><div class="nav-item"><a href="https://github.com/jx-sec/jxwaf" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Select language" class="dropdown-title"><span class="title">Languages</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/best-practice.html" class="nav-link">
+  简体中文
+</a></li><li class="dropdown-item"><!----> <a href="/en/best-practice.html" class="nav-link router-link-exact-active router-link-active">
+  English
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/" class="sidebar-link">Home</a></li><li><a href="/best-practice.html" class="sidebar-link">JXWAF 最佳实践</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="jxwaf-best-practices"><a href="#jxwaf-best-practices" class="header-anchor">#</a> JXWAF best practices</h1> <h2 id="deployment"><a href="#deployment" class="header-anchor">#</a> Deployment</h2> <h4 id="schema-diagram"><a href="#schema-diagram" class="header-anchor">#</a> Schema diagram</h4> <p><img src="/assets/img/jxwaf-mini3.b202baea.png" alt=""></p> <ul><li>Blue is where the jxwaf node is deployed</li> <li>The log docking is the Alibaba Cloud log service</li></ul> <h4 id="environment-preparation"><a href="#environment-preparation" class="header-anchor">#</a> Environment preparation</h4> <ul><li>jxwaf node
+<ul><li>Centos 7.4</li></ul></li> <li>jxwaf Console
+<ul><li>Centos 7.4</li></ul></li> <li>Database
+<ul><li>Mysql/Mariadb</li></ul></li></ul> <h4 id="rapid-deployment-source-deployment"><a href="#rapid-deployment-source-deployment" class="header-anchor">#</a> Rapid deployment (source deployment)</h4> <p><strong>Console deployment</strong></p> <p>The database needs to be deployed first, assuming a database address: 192.168.1.1, port: 3306, account: root, password: 123456, and database jxwaf</p> <ol><li>$ yum install git -y</li> <li>$ cd /opt</li> <li>$ git clone https://github.com/jx-sec/jxwaf-mini-server.git</li> <li>$ cd jxwaf-mini-server/</li> <li>$ sh install.sh</li> <li>$ pip install -r requirements.txt</li> <li>$ vim jxwaf2018/settings.py</li></ol> <div class="language- extra-class"><pre class="language-text"><code># Database
+# https://docs.djangoproject.com/en/1.9/ref/settings/#databases
+#DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.sqlite3',
+#        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#    }
+#}
+
+DATABASES = {
+ 'default': {
+     'ENGINE': 'django.db.backends.mysql',
+     'NAME': 'jxwaf',
+     'USER': 'root',
+     'PASSWORD': '123456',
+     'HOST': '192.168.1.1',
+     'PORT': '3306',
+ }
+}
+
+</code></pre></div><ol start="6"><li>$ python manage.py makemigrations</li> <li>$ python manage.py migrate</li> <li>$ nohup python manage.py runserver 0.0.0.0:80 &amp;</li> <li>Assuming a server IP of 10.0.0.1, open URL http://10.0.0.1 to register, log in to your account after registration, and select the Semantic Engine version to load in the WAF Update-&gt; Semantic Engine Update. In WAF Update-&gt; Human Machine Recognition Update, select The Human Machine Identification Version Load, and click KEY Update Loader Identification for KEY</li> <li>The production environment is recommended for deployment via nginx+uwsgi, and details can be https://www.runoob.com/django/django-nginx-uwsgi.html or self-contained Google. Direct deployment defaults to debug mode and does not open access directly to the public network.</li> <li>After you register your account, you can turn off your account registration function by changing the OPEN_REGIST = True to OPEN_REGIST = False in the jxwaf2018/settings.py file</li></ol> <p><strong>节点部署</strong></p> <ol><li>$ yum install git -y</li> <li>$ cd /tmp</li> <li>$ git clone https://github.com/jx-sec/jxwaf.git</li></ol> <div class="language- extra-class"><pre class="language-text"><code>Tip: If you are in China, github download is slow and offers Baidu disk download
+https://pan.baidu.com/s/1WAt077rrOSNZj1E4X1u6pw code: vcgw
+</code></pre></div><ol start="4"><li>$ cd jxwaf</li> <li>$ sh install_waf.sh</li> <li>$ When you run, you display a similar message that the installation was successful:</li></ol> <div class="language- extra-class"><pre class="language-text"><code>nginx: the configuration file /opt/jxwaf/nginx/conf/nginx.conf syntax is ok
+nginx: configuration file /opt/jxwaf/nginx/conf/nginx.conf test is successful
+</code></pre></div><ol start="7"><li>Assuming a Central Administration IP of 10.0.0.1, open URL http://10.0.0.1 to register, log in to your account after registration, and get &quot;api key&quot; and &quot;api password&quot; on the global configuration page managed by WAF</li> <li>$ cd tools</li> <li>$ python jxwaf_local_init.py --api_key=a2dde899-96a7-40s2-88ba-31f1f75f1552 --api_password=653cbbde-1cac-11ea-978f-2e728ce88125 --waf_server=http://10.0.0.1</li> <li>api_key the value of &quot;api key&quot; in the global configuration page, the value of api_password is &quot;api password&quot; and the installation is successful when the run is complete</li></ol> <div class="language- extra-class"><pre class="language-text"><code>config file:  /opt/jxwaf/nginx/conf/jxwaf/jxwaf_config.json
+config result:
+init success,access_id is d7b9fe12-606c-4ca8-bcb5-3dde9853e5f4,access_secret is af5cfc8d-d564-44dd-ba11-f1fecdf95706
+auth result:
+try to connect jxwaf server auth api_key and api_password,result is True
+</code></pre></div><ol start="11"><li>$ /opt/jxwaf/nginx/sbin/nginx</li> <li>Start openresty, which automatically pulls the latest rules for user configuration to the jxwaf Management Center when you start or reload, and then syncs the configuration periodically, with cycles set on the global configuration page.</li></ol> <h4 id="alibaba-cloud-log-deployment"><a href="#alibaba-cloud-log-deployment" class="header-anchor">#</a> Alibaba Cloud Log Deployment</h4> <ol><li>Create Project</li></ol> <p><img src="/assets/img/project.16e25aa5.jpg" alt=""></p> <ol start="2"><li>Create Logstore</li></ol> <p><img src="/assets/img/logstore.f404571c.jpg" alt=""></p> <ol start="3"><li>Install logtail</li></ol> <p>Logtail client is a log acquisition client provided by Alibaba Cloud Log Services</p> <p><img src="/assets/img/create1.d5d2ec2a.jpg" alt=""></p> <p><img src="/assets/img/create2.45bbdeb8.jpg" alt=""></p> <p><img src="/assets/img/create3.145d9eca.jpg" alt=""></p> <ol start="4"><li>$ wget http://logtail-release-cn-shenzhen.oss-cn-shenzhen.aliyuncs.com/linux64/logtail.sh -O logtail.sh; chmod 755 logtail.sh; ./logtail.sh install cn-shenzhen-internet</li></ol> <div class="language- extra-class"><pre class="language-text"><code>logtail-linux64.tar.gz download success
+install logtail files success
+chkconfig add ilogtaild success
+install logtail success
+ilogtail is running
+start logtail success
+{
+   &quot;UUID&quot; : &quot;8A134173-30E7-4CC9-B924-34ABEC00D81B&quot;,
+   &quot;hostname&quot; : &quot;VM-16-12-centos&quot;,
+   &quot;instance_id&quot; : &quot;C36692DC-0C6D-11EB-A61A-525400473BD9_172.16.16.12_1602495113&quot;,
+   &quot;ip&quot; : &quot;172.16.16.12&quot;,
+   &quot;logtail_version&quot; : &quot;0.16.48&quot;,
+   &quot;os&quot; : &quot;Linux; 3.10.0-693.el7.x86_64; #1 SMP Tue Aug 22 21:09:27 UTC 2017; x86_64&quot;,
+   &quot;update_time&quot; : &quot;2020-10-12 17:31:53&quot;
+}
+</code></pre></div><ol start="5"><li>Create a master account AliUid file with the same name to the /etc/ilogtail/users directory, if the directory does not exist please manually create the directory. Multiple primary accounts ( AliUid ) can be configured on one server，For example：</li></ol> <div class="language- extra-class"><pre class="language-text"><code>touch /etc/ilogtail/users/1833192882890167
+touch /etc/ilogtail/users/1833192882890167
+</code></pre></div><ol start="6"><li>Create a machine group，ip is the output in step 4, here at 172.16.16.12</li></ol> <p><img src="/assets/img/create4.b8cdfa4f.jpg" alt=""></p> <p>7.The machine group was created successfully
+<img src="/assets/img/create5.aa6d2ea7.jpg" alt=""></p> <ol start="8"><li>Data source settings</li></ol> <p><img src="/assets/img/create6.17da9b54.jpg" alt=""></p> <div class="language- extra-class"><pre class="language-text"><code>{
+    &quot;inputs&quot;: [
+        {
+            &quot;detail&quot;: {
+                &quot;ParseProtocol&quot;: &quot;auto&quot;,
+                &quot;Address&quot;: &quot;tcp://0.0.0.0:5555&quot;
+            },
+            &quot;type&quot;: &quot;service_syslog&quot;
+        }
+    ],
+    &quot;processors&quot;: [
+        {
+            &quot;detail&quot;: {
+                &quot;DropKeys&quot;: [
+                    &quot;_facility_&quot;,
+                    &quot;_hostname_&quot;,
+                    &quot;_ip_&quot;,
+                    &quot;_priority_&quot;,
+                    &quot;_program_&quot;,
+                    &quot;_severity_&quot;,
+                    &quot;_unixtimestamp_&quot;
+                ]
+            },
+            &quot;type&quot;: &quot;processor_drop&quot;
+        },
+        {
+            &quot;detail&quot;: {
+                &quot;KeepSource&quot;: false,
+                &quot;ExpandDepth&quot;: 0,
+                &quot;ExpandConnector&quot;: &quot;&quot;,
+                &quot;SourceKey&quot;: &quot;_content_&quot;,
+                &quot;NoKeyError&quot;: true
+            },
+            &quot;type&quot;: &quot;processor_json&quot;
+        }
+    ]
+}
+</code></pre></div><ol start="9"><li>The index is generated</li></ol> <p><img src="/assets/img/create7.6e1b2444.jpg" alt=""></p> <p>This step can be created manually later, but it is recommended that it be generated automatically through logs, as setup below, as detailed in the &quot;Configuration&quot; section.</p> <p>In the console, Global configuration - &gt; Log configuration</p> <p><img src="/assets/img/log.a7c1d13d.jpg" alt=""></p> <p>When the configuration is complete, a request is made to the site, and the following page appears, which means that the log was received successfully</p> <p><img src="/assets/img/create8.14bf5d82.jpg" alt="">
+Click &quot;Auto-index&quot; to determine</p> <p><img src="/assets/img/create9.a5c0d7f3.jpg" alt=""></p> <ol start="10"><li>Please review the official documentation if there is a problem with the above steps https://help.aliyun.com/product/28958.html Or get official support.</li></ol> <h2 id="configuration"><a href="#configuration" class="header-anchor">#</a> Configuration.</h2> <p>Domain name: 81.71.34.242</p> <p>业务服务器 IP: 81.71.32.242</p> <h4 id="console-configuration"><a href="#console-configuration" class="header-anchor">#</a> Console configuration</h4> <ol><li>Add a site</li></ol> <p>&quot;My Websites&quot; - &gt; &quot;Add&quot;</p> <p><img src="/assets/img/domain.90e88a40.jpg" alt=""></p> <ol start="2"><li>Log configuration</li></ol> <p>&quot;Global Setting&quot; -&gt; &quot;Logging Setting&quot;</p> <p><img src="/assets/img/log.a7c1d13d.jpg" alt=""></p> <ol start="3"><li>AliCloud Logging Setting</li></ol> <p>&quot;Global Setting&quot; -&gt; &quot;AliCloud Logging Setting&quot;
+<img src="/assets/img/ali.5d5bcd9b.jpg" alt=""></p> <ol start="4"><li>Report presentation</li></ol> <p><img src="/assets/img/chart.3e1372d4.jpg" alt=""></p></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.eda64e37.js" defer></script><script src="/assets/js/2.de461551.js" defer></script><script src="/assets/js/4.e8a291a2.js" defer></script>
+  </body>
+</html>
